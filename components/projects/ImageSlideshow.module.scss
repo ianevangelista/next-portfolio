@@ -1,0 +1,56 @@
+@use "~@fremtind/jkl-core/jkl";
+@use "~@fremtind/jkl-core/variables/_colors.scss";
+@import "~@fremtind/jkl-core/mixins/_all.scss";
+@import "~@fremtind/jkl-core/mixins/_helpers.scss";
+@import "~@fremtind/jkl-core/variables/all";
+@import "~@fremtind/jkl-core/functions";
+
+.next,
+.prev {
+    top: calc(50% - 20px);
+    position: absolute;
+    background: white;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.next {
+    right: 10px;
+    color: $granitt;
+}
+
+.prev {
+    left: 10px;
+    color: $granitt;
+    transform: scale(-1);
+}
+
+.img-slide {
+    position: absolute;
+    max-width: 100%;
+    max-width: 100%;
+}
+
+.refresh {
+    padding: 10px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

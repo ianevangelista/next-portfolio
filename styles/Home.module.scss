@@ -1,0 +1,19 @@
+@use "~@fremtind/jkl-core/jkl";
+@use "~@fremtind/jkl-core/variables/_colors.scss";
+@import "~@fremtind/jkl-core/variables/all";
+@import "~@fremtind/jkl-core/functions";
+
+.home {
+    &__title {
+        color: $snohvit;
+    }
+
+    &__link {
+        cursor: pointer;
+        color: $snohvit;
+    }
+
+    &__toggle {
+        height: 100vh;
+    }
+}

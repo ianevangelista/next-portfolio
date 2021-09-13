@@ -1,0 +1,26 @@
+@use "~@fremtind/jkl-core/jkl";
+@use "~@fremtind/jkl-core/variables/_colors.scss";
+@import "@fremtind/jkl-core/core.min.css";
+@import "~@fremtind/jkl-webfonts/webfonts.scss";
+@import "~@fremtind/jkl-loader/loader.min.css";
+@import "~@fremtind/jkl-content-toggle/content-toggle.min.css";
+@import "~@fremtind/jkl-button/button.min.css";
+@import "~@fremtind/jkl-accordion/accordion.min.css";
+@import "~@fremtind/jkl-list/list.min.css";
+@import "~@fremtind/jkl-card/card.min.css";
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Fremtind Grotesk", Calibri, Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}

@@ -1,0 +1,64 @@
+@use "~@fremtind/jkl-core/jkl";
+@use "~@fremtind/jkl-core/variables/_colors.scss";
+@import "~@fremtind/jkl-core/mixins/_all.scss";
+@import "~@fremtind/jkl-core/mixins/_helpers.scss";
+@import "~@fremtind/jkl-core/variables/all";
+@import "~@fremtind/jkl-core/functions";
+
+$medium: 900px;
+
+.project {
+    &__title-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__title {
+        @include jkl.text-style("heading-1");
+        @media screen and (max-width: $medium) {
+            @include jkl.text-style("body/small-screen");
+        }
+    }
+
+    &__github {
+        margin-left: $layout-spacing--medium;
+    }
+
+    &__slideshow-container {
+        margin-top: $layout-spacing--medium;
+        width: 50vw;
+        height: 50vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+
+        @media screen and (max-width: $medium) {
+            width: 100%;
+            position: initial;
+        }
+    }
+
+    &__animation-wrapper {
+        transition: 200ms height ease-in-out;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__description {
+        margin-top: $layout-spacing--small;
+        @include jkl.text-style("heading-2");
+
+        @media screen and (max-width: $medium) {
+            @include jkl.text-style("body/small-screen");
+        }
+    }
+
+    &__button {
+        margin-top: $layout-spacing--small;
+    }
+}

@@ -1,0 +1,93 @@
+@use "~@fremtind/jkl-core/jkl";
+@use "~@fremtind/jkl-core/variables/_colors.scss";
+@import "~@fremtind/jkl-core/variables/all";
+@import "~@fremtind/jkl-core/functions";
+
+$medium: 900px;
+
+.about {
+    color: $snohvit;
+    @include jkl.text-style("body");
+
+    @media screen and (max-width: $medium) {
+        @include jkl.text-style("small/small-screen");
+    }
+
+    &__content {
+        color: $snohvit;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media screen and (max-width: $medium) {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__accordion-row {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+
+        @media screen and (max-width: $medium) {
+            margin-top: $layout-spacing--small;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+    &__accordion-item {
+        background-color: inherit;
+    }
+
+    &__bold {
+        font-weight: bold;
+    }
+
+    &__image-box {
+        width: 240px;
+        height: 240px;
+
+        overflow: hidden;
+        position: relative;
+        font-size: 1.25rem;
+        align-items: center;
+        flex-shrink: 0;
+        line-height: 1;
+        user-select: none;
+        border-radius: 50%;
+        justify-content: center;
+    }
+
+    &__image {
+        background-image: url("../public/ian.jpg");
+        background-size: cover;
+        background-position: -2rem;
+        color: transparent;
+        width: 100%;
+        height: 140%;
+        object-fit: cover;
+        text-align: center;
+    }
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        margin-top: $layout-spacing--small;
+    }
+    &__icon {
+        cursor: pointer;
+        margin-right: $layout-spacing--xs;
+    }
+    &__phone {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__phone-text {
+        @media screen and (max-width: $medium) {
+            font-size: 12px;
+        }
+    }
+}
